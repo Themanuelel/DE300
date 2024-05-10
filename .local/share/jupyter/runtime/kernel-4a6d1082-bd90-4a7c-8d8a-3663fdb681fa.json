@@ -1,0 +1,13 @@
+{
+  "shell_port": 40559,
+  "iopub_port": 41241,
+  "stdin_port": 39823,
+  "control_port": 38037,
+  "hb_port": 53409,
+  "ip": "127.0.0.1",
+  "key": "23d6c56e-64e49c385dda41d0ea47f10e",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "python3",
+  "jupyter_session": "/home/jovyan/homework2/data_cleaning_analysis.ipynb"
+}

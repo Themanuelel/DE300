@@ -1,0 +1,13 @@
+{
+  "shell_port": 48373,
+  "iopub_port": 46701,
+  "stdin_port": 41687,
+  "control_port": 59775,
+  "hb_port": 40609,
+  "ip": "127.0.0.1",
+  "key": "c505d9ab-ea67813929b20179e194d239",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "python3",
+  "jupyter_session": "/home/jovyan/ml/ml_pyspark.ipynb"
+}

@@ -1,0 +1,30 @@
+# Use the official Python image
+FROM python:latest
+
+# Create a new user and set permissions
+RUN useradd -m emanuel
+
+# Set ownership of the working directory
+WORKDIR /app
+RUN chown -R emanuel /app
+
+# Create a virtual environment
+RUN python -m venv /venv
+
+# Activate the virtual environment
+ENV PATH="/venv/bin:${PATH}"
+
+# Install necessary Python packages
+RUN pip install pandas sqlalchemy psycopg2-binary jupyter pyarrow
+
+# Switch to non-root user
+USER emanuel
+
+# Copy heart disease data into the container
+COPY heart_disease_subset.csv /app/heart_disease_subset.csv
+
+# Expose the Jupyter Notebook port
+EXPOSE 8888
+
+# Command to run Jupyter Notebook
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]
